@@ -34,6 +34,7 @@ var resultado = await usuario.update(
   }
 );
 
+  
 res.json(resultado);
 });
 
