@@ -34,11 +34,17 @@ var resultado = await usuario.update(
   }
 );
 
-  
 res.json(resultado);
 });
 
-
+app.delete("/:id", async function(req, res){
+var resultado = await usuario.destroy({
+    where: {
+      id: req.params.id,
+    },
+  });
+  res.json(resultado);
+});
 
 
 
